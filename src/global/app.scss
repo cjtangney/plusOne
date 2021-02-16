@@ -1,0 +1,61 @@
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+
+// Setup for Bootstrap
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "bootstrap-grid";
+@import "utilities";
+@import "utilities/api";
+@import "reboot";
+
+@import "dropdown";
+@import "buttons";
+// @import "button-group";
+// @import "input-group";
+@import "forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "tables";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "print";
+@import "transitions";
+@import "helpers";
+
+.hero {
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+      display: flex;
+      min-width: 200px;
+      padding: 8px 16px;
+      align-items: center;
+  }
+}

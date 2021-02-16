@@ -1,0 +1,19 @@
+hero-grid {
+    .hero-grid {
+        .series-label {
+            border-bottom: solid 1px #ACACAC;
+            p,
+            span {
+                @include font-size(20px);
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: 0;
+            }
+
+            .win-rate {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

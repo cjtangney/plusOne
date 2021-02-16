@@ -6,60 +6,68 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface AppHome {
-        "value": number;
+    interface HeroGrid {
     }
-    interface AppRoot {
+    interface HeroRow {
+        "gamesBanned": number;
+        "gamesPlayed": number;
+        "gamesWon": number;
+        "heroName": string;
     }
-    interface PageNotFound {
+    interface SiteLoader {
+        "markup": any;
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    interface HTMLHeroGridElement extends Components.HeroGrid, HTMLStencilElement {
     }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
+    var HTMLHeroGridElement: {
+        prototype: HTMLHeroGridElement;
+        new (): HTMLHeroGridElement;
     };
-    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    interface HTMLHeroRowElement extends Components.HeroRow, HTMLStencilElement {
     }
-    var HTMLAppRootElement: {
-        prototype: HTMLAppRootElement;
-        new (): HTMLAppRootElement;
+    var HTMLHeroRowElement: {
+        prototype: HTMLHeroRowElement;
+        new (): HTMLHeroRowElement;
     };
-    interface HTMLPageNotFoundElement extends Components.PageNotFound, HTMLStencilElement {
+    interface HTMLSiteLoaderElement extends Components.SiteLoader, HTMLStencilElement {
     }
-    var HTMLPageNotFoundElement: {
-        prototype: HTMLPageNotFoundElement;
-        new (): HTMLPageNotFoundElement;
+    var HTMLSiteLoaderElement: {
+        prototype: HTMLSiteLoaderElement;
+        new (): HTMLSiteLoaderElement;
     };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
-        "app-root": HTMLAppRootElement;
-        "page-not-found": HTMLPageNotFoundElement;
+        "hero-grid": HTMLHeroGridElement;
+        "hero-row": HTMLHeroRowElement;
+        "site-loader": HTMLSiteLoaderElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
-        "value"?: number;
+    interface HeroGrid {
     }
-    interface AppRoot {
+    interface HeroRow {
+        "gamesBanned"?: number;
+        "gamesPlayed"?: number;
+        "gamesWon"?: number;
+        "heroName"?: string;
     }
-    interface PageNotFound {
+    interface SiteLoader {
+        "markup"?: any;
     }
     interface IntrinsicElements {
-        "app-home": AppHome;
-        "app-root": AppRoot;
-        "page-not-found": PageNotFound;
+        "hero-grid": HeroGrid;
+        "hero-row": HeroRow;
+        "site-loader": SiteLoader;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
-            "page-not-found": LocalJSX.PageNotFound & JSXBase.HTMLAttributes<HTMLPageNotFoundElement>;
+            "hero-grid": LocalJSX.HeroGrid & JSXBase.HTMLAttributes<HTMLHeroGridElement>;
+            "hero-row": LocalJSX.HeroRow & JSXBase.HTMLAttributes<HTMLHeroRowElement>;
+            "site-loader": LocalJSX.SiteLoader & JSXBase.HTMLAttributes<HTMLSiteLoaderElement>;
         }
     }
 }

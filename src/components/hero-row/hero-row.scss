@@ -1,0 +1,31 @@
+hero-row {
+  .hero {
+    p,
+    span {
+      margin: 0;
+      @include font-size(18px);
+    }
+
+    .games-played,
+    .games-won,
+    .games-banned {
+      justify-content: center;
+      font-weight: 600;
+    }
+
+    .win-rate {
+      justify-content: flex-end;
+      font-weight: 600;
+    }
+
+    .btn {
+        margin-left: 1rem;
+    }
+  }
+
+  &:nth-of-type(even) {
+    .hero {
+      background-color: $gray-200;
+    }
+  }
+}
