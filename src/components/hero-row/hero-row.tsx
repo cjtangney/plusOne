@@ -67,7 +67,6 @@ export class HeroRow implements ComponentInterface {
     window.localStorage.setItem(`hero:${this.heroName}`, JSON.stringify(hero));
 
     axios.post(`${api}/update:${JSON.stringify(hero)}`).then((res) => {
-      console.log(res);
     });
   }
 
