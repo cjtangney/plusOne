@@ -12,7 +12,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // comment line to disable service workers
-      baseUrl: 'https://localhost:3333',
+      baseUrl: 'https://plus-one-server.vercel.app',
       copy: [
         { src: 'pages' }
       ]
