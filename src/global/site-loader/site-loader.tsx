@@ -4,6 +4,7 @@ import { createRouter, Route } from 'stencil-router-v2';
 import axios from 'axios';
 
 const Router = createRouter();
+const api = 'https://plus-one-server.vercel.app';
 
 @Component({
   tag: 'site-loader',
@@ -27,7 +28,7 @@ export class SiteLoader implements ComponentInterface {
 
   // heroes loaded into local storage
   loadHeroes = async () => {
-    axios.get('http://localhost:3000/heroes',
+    axios.get(`${api}/heroes`,
       {
         timeout: 5000,
       })

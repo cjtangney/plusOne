@@ -2,6 +2,7 @@ import { Component, h, ComponentInterface, State, Element, Prop } from '@stencil
 import { guid } from 'utils';
 import axios from 'axios';
 
+const api = 'https://plus-one-server.vercel.app';
 
 @Component({
   tag: 'hero-row',
@@ -65,7 +66,7 @@ export class HeroRow implements ComponentInterface {
     hero.timesBanned = this.gamesBanned;
     window.localStorage.setItem(`hero:${this.heroName}`, JSON.stringify(hero));
 
-    axios.post(`http://localhost:3000/update:${JSON.stringify(hero)}`).then((res) => {
+    axios.post(`${api}/update:${JSON.stringify(hero)}`).then((res) => {
       console.log(res);
     });
   }
